@@ -1,0 +1,6 @@
+[submodule "Project-Vehicles-Api"]
+	path = Project-Vehicles-Api
+	url = https://github.com/lsolier/Project-Vehicles-Api.git
+[submodule "Postman-Collections-Vehicles-Api"]
+	path = Postman-Collections-Vehicles-Api
+	url = https://github.com/lsolier/Postman-Collections-Vehicles-Api.git

@@ -1,0 +1,39 @@
+{
+	"info": {
+		"_postman_id": "4b8d16d8-c39b-4ec6-a671-56f7f2c3322c",
+		"name": "Boogle Maps",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Retrieve Random Address",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9003/maps?lon=148512&lat=98754",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9003",
+					"path": [
+						"maps"
+					],
+					"query": [
+						{
+							"key": "lon",
+							"value": "148512"
+						},
+						{
+							"key": "lat",
+							"value": "98754"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}

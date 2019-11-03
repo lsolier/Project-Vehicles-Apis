@@ -1,0 +1,148 @@
+{
+	"info": {
+		"_postman_id": "80015f2c-0cbb-4709-813b-46224cf636b1",
+		"name": "Vehicles-API",
+		"description": "Vehicles API that serves as an endpoint to track vehicle inventory.",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Eureka-Server",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Get Cars",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"password": "password",
+						"username": "admin"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:9001/cars"
+			},
+			"response": []
+		},
+		{
+			"name": "Get Specific Car",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"password": "password",
+						"username": "admin"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:9001/cars/1"
+			},
+			"response": []
+		},
+		{
+			"name": "Create Car",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"password": "password",
+						"username": "admin"
+					}
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"condition\" : \"NEW\",\n\t\"details\" : {\n\t\t\"body\" : \"Porsche 718 Spyder 4.0 (420 Hp) PDK 2019\",\n\t\t\"model\" : \"718\",\n\t\t\"numberOfDoors\" : 4,\n\t\t\"fuelType\" : \"Gasoline\",\n\t\t\"engine\" : \"3995 cm3\",\n\t\t\"mileage\" : 0,\n\t\t\"modelYear\" : 2019,\n\t\t\"productionYear\" : 2019,\n\t\t\"externalColor\" : \"White\",\n\t\t\"manufacturer\" : {\n\t\t\t\"code\" : 100\n\t\t}\n\t},\n\t\"location\" : {\n\t\t\"lon\" : -12.105610, \n\t\t\"lat\" : -77.019041\n\t}\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:9001/cars"
+			},
+			"response": []
+		},
+		{
+			"name": "Update Car",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"password": "password",
+						"username": "admin"
+					}
+				},
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"condition\" : \"NEW\",\n\t\"details\" : {\n\t\t\"body\" : \"Porsche 718 Spyder 4.0 (420 Hp) PDK 2019\",\n\t\t\"model\" : \"718\",\n\t\t\"numberOfDoors\" : 4,\n\t\t\"fuelType\" : \"Gasoline\",\n\t\t\"engine\" : \"3995 cm3\",\n\t\t\"mileage\" : 0,\n\t\t\"modelYear\" : 2019,\n\t\t\"productionYear\" : 2019,\n\t\t\"externalColor\" : \"Red\",\n\t\t\"manufacturer\" : {\n\t\t\t\"code\" : 100\n\t\t}\n\t},\n\t\"location\" : {\n\t\t\"lon\" : -12.105610, \n\t\t\"lat\" : -77.019041\n\t}\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:9001/cars/2"
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Car",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"password": "password",
+						"username": "admin"
+					}
+				},
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:9001/cars/2"
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
